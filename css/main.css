@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btns-container {
+    display: flex;
+    gap: 5px;
+}
+
+h1 {
+    color: white;
+}
+
+.black {
+    background-color: rgb(131, 171, 198);
+}
+
+.white {
+    background-color: rgb(236, 245, 245);
+}
+
+
+.mark {
+    background-color: lightpink;
+}
+
+.center {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.game-board {
+    --size: 56px;
+}
+
+.game-board td {
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 550;
+    cursor: pointer;
+    color: black;
+}
+
+.piece {
+    --circleSize: calc(var(--size) / 2.3);
+    background-image: radial-gradient(circle, rgb(255, 49, 49) 60%, transparent 60%);
+    background-repeat: no-repeat;
+}
+
+[class*="start"] {
+    border: 3px dashed rgb(255, 0, 0);
+}
+
+.start-up {
+    border-bottom-color: transparent;
+}
+
+.start-center {
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+
+.start-right {
+    border-left-color: transparent;
+}
+
+/* #h1-title {
+    background-color: red;
+} */
+
+.shake {
+    animation: shake 0.2s alternate 2;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(1.5px)
+    }
+
+    50% {
+        transform: translateX(-1.5px)
+    }
+
+    75% {
+        transform: translateX(1.5px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
